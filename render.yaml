@@ -1,0 +1,12 @@
+# Optional Render blueprint. You can still do everything from the dashboard —
+# this just pre-fills the Docker image path.
+services:
+  - type: web
+    name: kintech-crm
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production

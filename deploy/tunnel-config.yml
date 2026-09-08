@@ -1,0 +1,14 @@
+# Named Cloudflare Tunnel -> this machine's pm2 app on :8100.
+# Create it first (one-time, interactive):
+#   cloudflared tunnel login
+#   cloudflared tunnel create kintech
+#   cloudflared tunnel route dns kintech crm.kintechagency.com
+# `credentials-file` lands at ~/.cloudflared/<TUNNEL_ID>.json; copy it to kintech.json:
+#   cp ~/.cloudflared/<TUNNEL_ID>.json ~/.cloudflared/kintech.json
+tunnel: kintech
+credentials-file: /home/ahsanhabibhamim/.cloudflared/kintech.json
+
+ingress:
+  - hostname: crm.kintechagency.com
+    service: http://127.0.0.1:8100
+  - service: http_status:404

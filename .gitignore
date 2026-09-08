@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dev-dist/
+.env
+uploads/*
+!uploads/.gitkeep
+backups/*
+!backups/.gitkeep
+server/tests/
+*.log
+.DS_Store
+.vercel
+vercel.json

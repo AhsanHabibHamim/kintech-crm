@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /uploads/
+Allow: /login
+Allow: /register
+
+# Sitemap for search engines
+Sitemap: https://crm.kintechagency.com/sitemap.xml
